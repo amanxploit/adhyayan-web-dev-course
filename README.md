@@ -22,7 +22,6 @@ Students will learn:
 * React Documentation
 * Node.js Docs
 
-📂 Folder: `/resources`
 
 ---
 ## 🎯 Goal of This Course
