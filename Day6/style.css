@@ -1,0 +1,41 @@
+body{
+    margin: 0px;
+}
+.navbar{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    list-style-type: none;
+    background-color: black;
+}
+.navbar li{
+    float: left;
+}
+.navbar a{
+    display: block;
+    color: mediumvioletred;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar li:hover{
+    background-color: gray;
+}
+.navbar li:hover a{
+    color: darkblue;
+}
+
+ 
+h1{
+    color: red;
+    text-align: center;
+}
+h2{
+    color: darkblue;
+    text-align: center;
+}
+p{
+    color: darkgreen;
+    text-align: center;
+    padding: 0px 20px;
+} 

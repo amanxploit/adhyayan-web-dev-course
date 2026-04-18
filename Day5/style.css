@@ -1,0 +1,43 @@
+body{
+    background-color: aqua;
+    margin: 0px;
+    padding: 0px;
+}
+
+li{
+    
+    display: block;
+    float: left;
+    padding: 20px;
+}
+
+h1{
+    color: red;
+}
+
+ul{
+    overflow: hidden;
+    list-style-type: none;
+    background-color: black;
+    margin: 0px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+li:hover{
+    background-color: rgb(70, 69, 69);
+}
+
+.Heading{
+    color: black;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.description{
+    color: black;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

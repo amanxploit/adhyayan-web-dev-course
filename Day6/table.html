@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      table,td,tr,th{
+        border: 1px solid black;
+        /* border-collapse: collapse; */
+        padding: 10px;
+        border-style: dotted;
+      }
+
+      /* tr:nth-child(even){
+        background-color: yellow;
+      }
+ */
+      table tr{
+        text-align: center;
+      }
+
+      table tr:hover{
+        background-color: lightgray;
+        font-weight: bold;
+
+      }
+
+    table tr td:hover, table:hover,table tr:hover{
+        background-color: aqua;
+       
+      }
+
+    </style>
+</head>
+
+<body>
+    <h1>Table</h1>
+
+
+    <table width="100%">
+        <colgroup>
+            <col span="1" class="Group1" style="width: 25%; background-color: red;">
+             <col span="3" style="width: 25%; background-color: blue;">
+        </colgroup>
+        <caption style="background-color: aqua; padding: 10px; font-weight: bold; color: black; border-top-left-radius: 10px; border-top-right-radius: 10px;">Student details</caption>
+        <thead style="background-color: blue; color: white;">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Class</th>
+                <th>Roll no</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        </tr>
+
+        <tr>
+            <td class="Name">Rohit</td>
+            <td>20</td>
+            <td>12<sup>th</sup></td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Aman</td>
+            <td>21</td>
+            <td>12<sup>th</sup></td>
+            <td>2</td>
+        </tr>
+
+        <tr>
+            <td>Aman</td>
+            <td>21</td>
+            <td>12<sup>th</sup></td>
+            <td>2</td>
+        </tr>
+
+        <tr>
+            <td>Aman</td>
+            <td>21</td>
+            <td>12<sup>th</sup></td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Aman</td>
+            <td>21</td>
+            <td>12<sup>th</sup></td>
+            <td>2</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Aman</td>
+        </tr>
+        
+        <tr>
+            <td>Number</td>
+            <td>+91456789</td>
+            
+        </tr>
+    </table>
+
+</body>
+
+</html>
