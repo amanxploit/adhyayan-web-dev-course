@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment System - Book Your Health</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <i class="fas fa-stethoscope text-2xl text-blue-600 mr-2"></i>
+                    <span class="font-bold text-xl text-gray-800">DoctorAppoint</span>
+                </div>
+                <div id="nav-buttons" class="flex space-x-4">
+                    <button onclick="showLogin()" class="px-4 py-2 text-blue-600 hover:text-blue-700 font-medium">Login</button>
+                    <button onclick="showRegister()" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Register</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                Book Appointment with <span class="text-blue-600">Expert Doctors</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-8">Get quality healthcare from the comfort of your home</p>
+        </div>
+    </div>
+
+    <!-- Auth Forms -->
+    <div id="login-form" class="max-w-md mx-auto bg-white rounded-xl shadow-lg p-8 hidden">
+        <h2 class="text-2xl font-bold text-center mb-6">Login to Your Account</h2>
+        <form onsubmit="handleLogin(event)">
+            <div class="mb-4">
+                <label class="block text-gray-700 mb-2">Email</label>
+                <input type="email" id="login-email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 mb-2">Password</label>
+                <input type="password" id="login-password" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Login</button>
+        </form>
+        <p class="text-center mt-4 text-gray-600">Don't have an account? <button onclick="showRegister()" class="text-blue-600 hover:underline">Register</button></p>
+    </div>
+
+    <div id="register-form" class="max-w-md mx-auto bg-white rounded-xl shadow-lg p-8 hidden">
+        <h2 class="text-2xl font-bold text-center mb-6">Create New Account</h2>
+        <form onsubmit="handleRegister(event)">
+            <div class="mb-4">
+                <label class="block text-gray-700 mb-2">Full Name</label>
+                <input type="text" id="reg-name" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 mb-2">Email</label>
+                <input type="email" id="reg-email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 mb-2">Phone</label>
+                <input type="tel" id="reg-phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 mb-2">Password</label>
+                <input type="password" id="reg-password" required minlength="6" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Register</button>
+        </form>
+        <p class="text-center mt-4 text-gray-600">Already have an account? <button onclick="showLogin()" class="text-blue-600 hover:underline">Login</button></p>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

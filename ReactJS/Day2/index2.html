@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        button{
+            padding: 30px;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1 id="count">0</h1>
+
+    <!-- <div style="width: 20px; background-color: blue; height: 100px;">
+        <div style="background-color: red;height: 1px;" id="redC"></div>
+    </div> -->
+
+    <div>
+    <button onclick="sub()">-</button>
+
+    <button onclick="add()">+</button>
+    </div>
+
+
+    <div style="height: 15px; width: 100%; background-color: blue;">
+        <div style="height: 15px; width: 10px; background-color: red; position: relative;" id="redC"></div>
+    </div>
+
+    <script>
+        let count=0;
+
+        function add(){
+            count = count + 300;
+            document.getElementById('count').innerText=count;
+            move()
+        }
+
+        function sub(){
+            count = count - 1;
+            document.getElementById('count').innerText=count;
+            move()
+        }
+
+
+        function move(){
+            document.getElementById('redC').style.width = `${count}px`;
+        }
+
+       
+    </script>
+</body>
+
+</html>

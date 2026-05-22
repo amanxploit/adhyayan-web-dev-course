@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "password123",
+      "phone": "9876543210",
+      "addresses": [
+        {
+          "id": 1,
+          "type": "Home",
+          "address": "123 Main Street, Andheri East, Mumbai - 400093",
+          "isDefault": true
+        }
+      ],
+      "cart": [],
+      "orders": [],
+      "wishlist": []
+    }
+  ]
+}

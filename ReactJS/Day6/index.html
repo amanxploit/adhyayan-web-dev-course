@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="margin: 0px;">
+    <div style="display: flex;">
+        <div style="width: 50%; display: flex; flex-direction: column; align-items:end">
+            <button onclick="Run()">Run</button>
+            <textarea style="height: 600px; width: 100%;" id="CodeEdits"></textarea>
+        </div>
+        <div style="width: 50%;" id="browser"></div>
+    </div>
+
+    <script>
+        
+
+        function Run(){
+            var _CodeEdits = document.getElementById("CodeEdits").value
+            document.getElementById("browser").innerHTML=_CodeEdits;
+        }
+    </script>
+</body>
+
+</html>

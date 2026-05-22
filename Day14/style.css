@@ -1,0 +1,55 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.img-container img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  outline: 1px solid black;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  background-color: #f7f7f7;
+  outline: 1px solid black;
+}
+
+.item {
+  outline: 1px solid black;
+}
+
+.details {
+  padding: 10px;
+}
+
+.details h2{
+    margin: 0;
+    padding: 0;
+}
+
+
+.details p{
+    font-weight: 900;
+    margin: 4px;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}

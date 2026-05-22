@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white flex items-center justify-center min-h-screen">
+
+  <div class="w-full max-w-md p-8 space-y-6 bg-white text-black rounded-2xl shadow-2xl">
+    
+    <!-- Logo / Title -->
+    <div class="text-center">
+      <h2 class="text-3xl font-bold">Welcome Back</h2>
+      <p class="text-gray-500 text-sm mt-1">Login to your account</p>
+    </div>
+
+    <!-- Form -->
+    <div class="space-y-5">
+
+      <!-- Email -->
+      <div>
+        <label class="block text-sm font-medium mb-1">Email</label>
+        <input 
+          type="email" 
+          id="email"
+          placeholder="Enter your email"
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition"
+        >
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label class="block text-sm font-medium mb-1">Password</label>
+        <input 
+          type="password" 
+          id="password"
+          placeholder="Enter your password"
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition"
+        >
+      </div>
+
+      <!-- Options -->
+      <div class="flex items-center justify-between text-sm">
+        <label class="flex items-center gap-2">
+          <input type="checkbox" class="accent-black">
+          Remember me
+        </label>
+        <a href="./Forgot-Password.html" class="text-black hover:underline">Forgot password?</a>
+      </div>
+
+      <!-- Button -->
+      <button 
+        type="submit"
+        onclick="login()"
+        class="w-full bg-black text-white py-2 rounded-lg hover:bg-gray-800 transition font-semibold"
+      >
+        Sign In
+      </button>
+
+    </div>
+
+    <!-- Divider -->
+    <div class="flex items-center gap-3">
+      <hr class="flex-1 border-gray-300">
+      <span class="text-gray-400 text-sm">OR</span>
+      <hr class="flex-1 border-gray-300">
+    </div>
+
+    <!-- Social Login -->
+    <button class="w-full border border-gray-300 py-2 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-100 transition">
+      <svg class="w-5 h-5" viewBox="0 0 24 24">
+        <path fill="currentColor"
+          d="M21.35 11.1h-9.18v2.92h5.28c-.23 1.24-1.43 3.64-5.28 3.64-3.18 0-5.78-2.64-5.78-5.9s2.6-5.9 5.78-5.9c1.81 0 3.03.77 3.73 1.43l2.55-2.48C17.36 3.36 15.06 2.5 12.17 2.5 6.9 2.5 2.5 6.9 2.5 12s4.4 9.5 9.67 9.5c5.58 0 9.28-3.92 9.28-9.45 0-.64-.07-1.13-.1-1.45z"/>
+      </svg>
+      Continue with Google
+    </button>
+
+    <!-- Signup -->
+    <p class="text-center text-sm text-gray-500">
+      Don't have an account? 
+      <a href="./Signup.html" class="text-black font-medium hover:underline">Sign up</a>
+    </p>
+
+  </div>
+
+
+  <script>
+
+function login(){
+    var _email = document.getElementById("email").value;
+    var _password = document.getElementById("password").value;
+
+    if(_email == "amanbhagat.webcorevision@gmail.com" && _password=="Aman@123"){
+        window.location="./Dashboard.html"
+    }else{
+        alert("Wrong Password")
+    }
+}
+  </script>
+</body>
+</html>

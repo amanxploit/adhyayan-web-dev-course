@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    
+
+    <img src="./img/1.jpeg" id="imgsrc">
+    <button onclick="rolled()" style="padding: 50px; font-size: larger;">Rolled</button>
+
+
+    <script>
+        function rolled(){
+            var num = Math.floor(Math.random() * 6) + 1;
+            document.getElementById("imgsrc").src=`./img/${num}.jpeg`
+        }
+
+    </script>
+</body>
+</html>

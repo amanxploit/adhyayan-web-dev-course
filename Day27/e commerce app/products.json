@@ -1,0 +1,287 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "iPhone 15 Pro Max",
+      "brand": "Apple",
+      "category": "Electronics",
+      "subCategory": "Mobiles",
+      "price": 159900,
+      "originalPrice": 179900,
+      "discount": 11,
+      "rating": 4.8,
+      "reviews": 1234,
+      "description": "17.00 cm (6.7-inch) Super Retina XDR display, A17 Pro chip, Titanium design, 48MP main camera with 24MP photo output",
+      "features": [
+        "A17 Pro chip with 6-core GPU",
+        "48MP main camera + 12MP ultra wide + 12MP telephoto",
+        "Up to 29 hours video playback",
+        "USB-C connector with USB 3 support",
+        "Face ID"
+      ],
+      "specifications": {
+        "Display": "17.00 cm (6.7-inch) Super Retina XDR",
+        "Processor": "A17 Pro Chip",
+        "RAM": "8GB",
+        "Storage": "256GB",
+        "Battery": "4422 mAh",
+        "OS": "iOS 17"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400",
+        "https://images.unsplash.com/photo-1695048133418-3a1a7b5ab5a0?w=400",
+        "https://images.unsplash.com/photo-1695048133782-3a1a7b5ab5a1?w=400"
+      ],
+      "colors": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"],
+      "inStock": true,
+      "seller": "Apple Premium Store"
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy S24 Ultra",
+      "brand": "Samsung",
+      "category": "Electronics",
+      "subCategory": "Mobiles",
+      "price": 129999,
+      "originalPrice": 149999,
+      "discount": 13,
+      "rating": 4.7,
+      "reviews": 856,
+      "description": "17.27 cm (6.8-inch) Dynamic AMOLED 2X display, Snapdragon 8 Gen 3, 200MP camera, S Pen included",
+      "features": [
+        "Snapdragon 8 Gen 3 processor",
+        "200MP main camera with 100x Space Zoom",
+        "5,000mAh battery",
+        "S Pen integrated",
+        "Gorilla Glass Armor"
+      ],
+      "specifications": {
+        "Display": "17.27 cm (6.8-inch) Dynamic AMOLED 2X",
+        "Processor": "Snapdragon 8 Gen 3",
+        "RAM": "12GB",
+        "Storage": "256GB",
+        "Battery": "5000 mAh",
+        "OS": "Android 14"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400",
+        "https://images.unsplash.com/photo-1610945264803-c5e1f4f4b5b1?w=400"
+      ],
+      "colors": ["Titanium Gray", "Titanium Violet", "Titanium Yellow", "Titanium Black"],
+      "inStock": true,
+      "seller": "Samsung Official"
+    },
+    {
+      "id": 3,
+      "name": "MacBook Pro 14-inch",
+      "brand": "Apple",
+      "category": "Electronics",
+      "subCategory": "Laptops",
+      "price": 199900,
+      "originalPrice": 229900,
+      "discount": 13,
+      "rating": 4.9,
+      "reviews": 2100,
+      "description": "Apple M3 Pro chip with 12-core CPU, 18-core GPU, 18GB unified memory, 512GB SSD storage",
+      "features": [
+        "Apple M3 Pro chip",
+        "18GB unified memory",
+        "512GB SSD storage",
+        "14-inch Liquid Retina XDR display",
+        "Up to 18 hours battery life"
+      ],
+      "specifications": {
+        "Display": "14.2-inch Liquid Retina XDR",
+        "Processor": "Apple M3 Pro",
+        "RAM": "18GB",
+        "Storage": "512GB SSD",
+        "Battery": "Up to 18 hours",
+        "OS": "macOS"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400",
+        "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=400"
+      ],
+      "colors": ["Space Gray", "Silver"],
+      "inStock": true,
+      "seller": "Apple Authorized Reseller"
+    },
+    {
+      "id": 4,
+      "name": "Sony WH-1000XM5 Headphones",
+      "brand": "Sony",
+      "category": "Electronics",
+      "subCategory": "Audio",
+      "price": 29990,
+      "originalPrice": 34990,
+      "discount": 14,
+      "rating": 4.8,
+      "reviews": 3450,
+      "description": "Industry-leading noise canceling, Premium sound quality, 30-hour battery life, Quick charging",
+      "features": [
+        "Industry-leading ANC",
+        "30-hour battery life",
+        "Quick charging (3 min = 3 hours play)",
+        "Multipoint connection",
+        "Speak-to-chat technology"
+      ],
+      "specifications": {
+        "Type": "Over-ear",
+        "Battery Life": "30 hours",
+        "Charging": "USB-C",
+        "Connectivity": "Bluetooth 5.2",
+        "Weight": "250g"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=400",
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400"
+      ],
+      "colors": ["Black", "Silver", "Blue"],
+      "inStock": true,
+      "seller": "Sony Center"
+    },
+    {
+      "id": 5,
+      "name": "Nike Air Max 270",
+      "brand": "Nike",
+      "category": "Fashion",
+      "subCategory": "Footwear",
+      "price": 12995,
+      "originalPrice": 15995,
+      "discount": 19,
+      "rating": 4.6,
+      "reviews": 5678,
+      "description": "Nike Air Max 270 features the biggest heel Air unit yet, providing maximum cushioning and style",
+      "features": [
+        "Giant Air Max unit in heel",
+        "Breathable mesh upper",
+        "Foam midsole",
+        "Rubber outsole",
+        "Lace-up closure"
+      ],
+      "specifications": {
+        "Material": "Mesh, Synthetic",
+        "Sole": "Rubber",
+        "Closure": "Lace-up",
+        "Style": "Casual",
+        "Weight": "350g"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400",
+        "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400"
+      ],
+      "colors": ["Black/White", "Blue/White", "Red/Black"],
+      "inStock": true,
+      "seller": "Nike Store"
+    },
+    {
+      "id": 6,
+      "name": "Men's Classic Fit T-Shirt",
+      "brand": "US Polo",
+      "category": "Fashion",
+      "subCategory": "Clothing",
+      "price": 899,
+      "originalPrice": 1499,
+      "discount": 40,
+      "rating": 4.3,
+      "reviews": 3400,
+      "description": "Premium cotton t-shirt with classic fit, breathable fabric for all-day comfort",
+      "features": [
+        "100% combed cotton",
+        "Classic fit",
+        "Ribbed crew neck",
+        "Taped neck and shoulders",
+        "Machine wash"
+      ],
+      "specifications": {
+        "Fabric": "100% Cotton",
+        "Fit": "Classic",
+        "Neck": "Crew Neck",
+        "Pattern": "Solid",
+        "Sleeve": "Short Sleeve"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400",
+        "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400"
+      ],
+      "colors": ["White", "Black", "Navy", "Gray"],
+      "inStock": true,
+      "seller": "US Polo Association"
+    },
+    {
+      "id": 7,
+      "name": "Noise ColorFit Pro 4 Smartwatch",
+      "brand": "Noise",
+      "category": "Electronics",
+      "subCategory": "Wearables",
+      "price": 3999,
+      "originalPrice": 7999,
+      "discount": 50,
+      "rating": 4.4,
+      "reviews": 12000,
+      "description": "1.78-inch AMOLED display, Bluetooth calling, 100+ sports modes, IP68 water resistance",
+      "features": [
+        "1.78-inch AMOLED display",
+        "Bluetooth calling",
+        "100+ sports modes",
+        "7 days battery life",
+        "Heart rate & SpO2 monitor"
+      ],
+      "specifications": {
+        "Display": "1.78-inch AMOLED",
+        "Battery Life": "7 days",
+        "Water Resistance": "IP68",
+        "Compatibility": "Android & iOS",
+        "Sensors": "Heart rate, SpO2, Accelerometer"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=400",
+        "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=400"
+      ],
+      "colors": ["Jet Black", "Rose Pink", "Silver"],
+      "inStock": true,
+      "seller": "Noise Official"
+    },
+    {
+      "id": 8,
+      "name": "Premium Leather Wallet",
+      "brand": "WildHorn",
+      "category": "Accessories",
+      "subCategory": "Wallets",
+      "price": 1299,
+      "originalPrice": 2499,
+      "discount": 48,
+      "rating": 4.5,
+      "reviews": 890,
+      "description": "Genuine leather wallet with 6 card slots, 2 currency pockets, and RFID blocking technology",
+      "features": [
+        "Genuine leather",
+        "RFID blocking",
+        "6 card slots",
+        "ID window",
+        "Compact design"
+      ],
+      "specifications": {
+        "Material": "Genuine Leather",
+        "Dimensions": "11 x 9 cm",
+        "Card Slots": "6",
+        "Color": "Brown/Black",
+        "Warranty": "2 years"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1627123424574-724758594e93?w=400",
+        "https://images.unsplash.com/photo-1606503825008-909a67e63c3d?w=400"
+      ],
+      "colors": ["Brown", "Black", "Tan"],
+      "inStock": true,
+      "seller": "WildHorn Accessories"
+    }
+  ],
+  "categories": [
+    "Electronics",
+    "Fashion",
+    "Accessories",
+    "Home & Living"
+  ],
+  "featuredProducts": [1, 3, 4, 7]
+}

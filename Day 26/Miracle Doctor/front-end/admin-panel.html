@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Doctor Appointment System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <!-- Sidebar -->
+    <div class="flex h-screen">
+        <div class="w-64 bg-indigo-800 text-white fixed h-full">
+            <div class="p-4">
+                <div class="flex items-center space-x-2 mb-8">
+                    <i class="fas fa-stethoscope text-2xl"></i>
+                    <span class="font-bold text-xl">DoctorAppoint</span>
+                </div>
+                <nav class="space-y-2">
+                    <button onclick="showSection('dashboard')" class="nav-btn w-full text-left px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
+                        <i class="fas fa-tachometer-alt mr-2"></i>Dashboard
+                    </button>
+                    <button onclick="showSection('appointments')" class="nav-btn w-full text-left px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
+                        <i class="fas fa-calendar-check mr-2"></i>Appointments
+                    </button>
+                    <button onclick="showSection('doctors')" class="nav-btn w-full text-left px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
+                        <i class="fas fa-user-md mr-2"></i>Manage Doctors
+                    </button>
+                    <button onclick="showSection('patients')" class="nav-btn w-full text-left px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
+                        <i class="fas fa-users mr-2"></i>Patients
+                    </button>
+                    <button onclick="showSection('profile')" class="nav-btn w-full text-left px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
+                        <i class="fas fa-user-circle mr-2"></i>Profile
+                    </button>
+                    <button onclick="logout()" class="w-full text-left px-4 py-2 rounded-lg hover:bg-red-600 transition mt-8">
+                        <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                    </button>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 ml-64">
+            <div class="p-8">
+                <!-- Dashboard Section -->
+                <div id="dashboard-section" class="section">
+                    <h1 class="text-3xl font-bold mb-6">Dashboard</h1>
+                    <div id="stats-container" class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                        <!-- Stats will be loaded here -->
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h2 class="text-xl font-bold mb-4">Appointments Overview</h2>
+                        <canvas id="appointmentsChart" height="100"></canvas>
+                    </div>
+                </div>
+
+                <!-- Appointments Section -->
+                <div id="appointments-section" class="section hidden">
+                    <h1 class="text-3xl font-bold mb-6">All Appointments</h1>
+                    <div class="bg-white rounded-lg shadow overflow-hidden">
+                        <div class="p-4 border-b">
+                            <select id="status-filter" class="px-4 py-2 border rounded-lg">
+                                <option value="">All Status</option>
+                                <option value="pending">Pending</option>
+                                <option value="confirmed">Confirmed</option>
+                                <option value="completed">Completed</option>
+                                <option value="cancelled">Cancelled</option>
+                            </select>
+                        </div>
+                        <div id="appointments-list" class="divide-y"></div>
+                    </div>
+                </div>
+
+                <!-- Doctors Section -->
+                <div id="doctors-section" class="section hidden">
+                    <div class="flex justify-between items-center mb-6">
+                        <h1 class="text-3xl font-bold">Manage Doctors</h1>
+                        <button onclick="openAddDoctorModal()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">
+                            <i class="fas fa-plus mr-2"></i>Add Doctor
+                        </button>
+                    </div>
+                    <div id="doctors-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+                </div>
+
+                <!-- Patients Section -->
+                <div id="patients-section" class="section hidden">
+                    <h1 class="text-3xl font-bold mb-6">Patients</h1>
+                    <div id="patients-list" class="bg-white rounded-lg shadow divide-y"></div>
+                </div>
+
+                <!-- Profile Section -->
+                <div id="profile-section" class="section hidden">
+                    <h1 class="text-3xl font-bold mb-6">My Profile</h1>
+                    <div class="bg-white rounded-lg shadow p-6 max-w-2xl">
+                        <form onsubmit="updateProfile(event)">
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2">Name</label>
+                                <input type="text" id="profile-name" class="w-full px-4 py-2 border rounded-lg">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="profile-email" class="w-full px-4 py-2 border rounded-lg bg-gray-100" readonly>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2">Phone</label>
+                                <input type="tel" id="profile-phone" class="w-full px-4 py-2 border rounded-lg">
+                            </div>
+                            <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700">
+                                Update Profile
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Doctor Modal -->
+    <div id="add-doctor-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full mx-4 p-6 max-h-screen overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold">Add New Doctor</h3>
+                <button onclick="closeAddDoctorModal()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form onsubmit="addDoctor(event)">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Full Name</label>
+                        <input type="text" id="doc-name" required class="w-full px-4 py-2 border rounded-lg">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" id="doc-email" required class="w-full px-4 py-2 border rounded-lg">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Password</label>
+                        <input type="password" id="doc-password" required minlength="6" class="w-full px-4 py-2 border rounded-lg">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Phone</label>
+                        <input type="tel" id="doc-phone" class="w-full px-4 py-2 border rounded-lg">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Specialization</label>
+                        <input type="text" id="doc-specialization" required class="w-full px-4 py-2 border rounded-lg">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Qualification</label>
+                        <input type="text" id="doc-qualification" required class="w-full px-4 py-2 border rounded-lg">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Experience (Years)</label>
+                        <input type="number" id="doc-experience" required class="w-full px-4 py-2 border rounded-lg">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Consultation Fee ($)</label>
+                        <input type="number" id="doc-fee" required step="0.01" class="w-full px-4 py-2 border rounded-lg">
+                    </div>
+                    <div class="col-span-2">
+                        <label class="block text-gray-700 mb-2">Available Days</label>
+                        <input type="text" id="doc-days" placeholder="Monday,Tuesday,Wednesday" class="w-full px-4 py-2 border rounded-lg">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Start Time</label>
+                        <input type="time" id="doc-start-time" required class="w-full px-4 py-2 border rounded-lg">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">End Time</label>
+                        <input type="time" id="doc-end-time" required class="w-full px-4 py-2 border rounded-lg">
+                    </div>
+                    <div class="col-span-2">
+                        <label class="block text-gray-700 mb-2">About</label>
+                        <textarea id="doc-about" rows="3" class="w-full px-4 py-2 border rounded-lg"></textarea>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <button type="submit" class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700">
+                        Create Doctor
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

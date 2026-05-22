@@ -1,0 +1,27 @@
+
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "amount": 45.99,
+    "category": "Food",
+    "description": "Groceries",
+    "date": "2026-05-01"
+  },
+  {
+    "id": 2,
+    "userId": 1,
+    "amount": 120.00,
+    "category": "Transport",
+    "description": "Monthly bus pass",
+    "date": "2026-05-02"
+  },
+  {
+    "id": 3,
+    "userId": 1,
+    "amount": 350.00,
+    "category": "Shopping",
+    "description": "New shoes",
+    "date": "2026-05-03"
+  }
+]

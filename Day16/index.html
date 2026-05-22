@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            --primary-color: #0a97fc;
+            --secondary-color: #d6c5c5;
+            --font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: var(--primary-color);
+            padding: 10px;
+        }
+
+        .header ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header ul li {
+            display: inline-block;
+            margin-right: 10px;
+
+        }
+
+        .header ul li a {
+            text-decoration: none;
+            color: var(--secondary-color)
+        }
+
+        .container {
+            /* --primary-color: #000000; */
+            background-color: var(--primary-color, #0a97fc);
+            color: var(--secondary-color);
+            
+            display: flex;
+        }
+
+        .items{
+            height: 200px;
+            width: 300px;
+            background-color: antiquewhite;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                background-color: red;
+            }
+
+            .container {
+                flex-direction: column;
+                /* display: none; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="items">OKay</div>
+        <div class="items">OKay</div>
+
+        <div class="items">OKay</div>
+
+        <div class="items">OKay</div>
+
+        <div class="items">OKay</div>
+
+    </div>
+</body>
+
+</html>

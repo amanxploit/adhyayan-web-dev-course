@@ -1,0 +1,59 @@
+body{
+    background-color: #5473f0;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Quote{
+    background-color: white;   
+    width: 450px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.icons svg{
+    height: 20px;
+    outline: solid 1px #5473f0;
+    border-radius: 50%;
+    color: #5473f0;
+    padding: 5px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.author{
+    text-align: right;
+    font-style: italic;
+}
+
+q{
+    font-size: 20px;
+    display: block;
+    line-height: 25px;
+    text-align-last: center;
+}
+
+q::after, q::before{
+    font-size: 50px;
+    vertical-align: bottom;
+    margin: 12px;
+}
+
+
+.btn{
+    background-color: #5473f0;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 40px;
+}

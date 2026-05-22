@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board UI Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#f5f5f7] p-8 min-h-screen flex justify-center items-center">
+
+    <!-- Job Grid Container -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl w-full" id="cards">
+        
+        <!-- Card 1: Amazon -->
+        
+
+
+    </div>
+
+
+
+    <script>
+        const jobs = [
+        {
+            company: "Amazon",
+            logo: "a",
+            logoBg: "bg-black",
+            logoText: "text-white",
+            posted: "5 days ago",
+            title: "Senior UI/UX Designer",
+            tags: ["Part-time", "Senior level"],
+            salary: "$120/hr",
+            location: "San Francisco, CA",
+            saved: false
+        },
+       
+        {
+            company: "Google",
+            logo: "G",
+            logoBg: "bg-white border border-gray-100",
+            logoText: "text-blue-600",
+            posted: "30 days ago",
+            title: "Graphic Designer",
+            tags: ["Full-time", "Flexible schedule"],
+            salary: "$150 – 220k",
+            location: "Mountain View, CA",
+            saved: true
+        },
+        {
+            company: "Dribbble",
+            logo: "D",
+            logoBg: "bg-pink-500",
+            logoText: "text-white",
+            posted: "18 days ago",
+            title: "Senior Motion Designer",
+            tags: ["Contract", "Remote"],
+            salary: "$85/hr",
+            location: "San Francisco, CA",
+            saved: false
+        },
+        {
+            company: "Meta",
+            logo: "∞",
+            logoBg: "bg-blue-600",
+            logoText: "text-white",
+            posted: "3 months ago",
+            title: "UX Designer",
+            tags: ["Full-time", "In office"],
+            salary: "$200 – 250k",
+            location: "New York, NY",
+            saved: true
+        },
+        {
+            company: "Airbnb",
+            logo: "A",
+            logoBg: "bg-red-500",
+            logoText: "text-white",
+            posted: "1 day ago",
+            title: "Junior UX/UI Designer",
+            tags: ["Contract", "Remote"],
+            salary: "$100/hr",
+            location: "San Francisco, CA",
+            saved: false
+        },
+        {
+            company: "Apple",
+            logo: "",
+            logoBg: "bg-black",
+            logoText: "text-white",
+            posted: "6 days ago",
+            title: "Graphic Designer",
+            tags: ["Full-time", "Flexible schedule"],
+            salary: "$85 – 120k",
+            location: "Cupertino, CA",
+            saved: true
+        }
+    ];
+
+
+
+
+    /*
+{
+            company: "Amazon",
+            logo: "a",
+            logoBg: "bg-black",
+            logoText: "text-white",
+            posted: "5 days ago",
+            title: "Senior UI/UX Designer",
+            tags: ["Part-time", "Senior level"],
+            salary: "$120/hr",
+            location: "San Francisco, CA",
+            saved: false
+        },
+    */
+
+
+    for(let i =0; i< jobs.length;i++){
+        document.getElementById("cards").innerHTML+=`
+        <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 flex flex-col justify-between">
+            <div>
+                <div class="flex justify-between items-start mb-6">
+                    <div class="w-10 h-10 ${jobs[i].logoBg} rounded-full flex items-center justify-center text-white font-bold text-xs">${jobs[i].logo}</div>
+                    <button class="flex items-center gap-1 px-3 py-1 border border-gray-200 rounded-lg text-xs text-gray-500 hover:bg-gray-50 transition">
+                        Save <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
+                    </button>
+                </div>
+                <p class="text-sm text-gray-500 mb-1">${jobs[i].company} <span class="ml-2 text-gray-400">${jobs[i].posted}</span></p>
+                <h2 class="text-xl font-semibold text-gray-900 mb-4">${jobs[i].title}</h2>
+                <div class="flex gap-2 mb-6">
+                ${jobs[i].tags.map(tag => `<span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-md">${tag}</span>`).join('')}
+                    
+                </div>
+            </div>
+            <div>
+                <hr class="border-gray-100 mb-4">
+                <div class="flex justify-between items-end">
+                    <div>
+                        <p class="font-semibold text-gray-900">${jobs[i].salary}</p>
+                        <p class="text-xs text-gray-500">${jobs[i].location}</p>
+                    </div>
+                    <button class="bg-black text-white text-sm px-4 py-2 rounded-lg font-medium hover:bg-gray-800 transition">Apply now</button>
+                </div>
+            </div>
+        </div>
+        `;
+       
+    }
+
+    </script>
+</body>
+</html>
