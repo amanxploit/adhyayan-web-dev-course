@@ -1,0 +1,55 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.msginputbox{
+    width: 100%;
+    height: 32px;
+}
+
+.header{
+    overflow: scroll;
+    background-color: black;
+    height: 100vh;
+}
+
+.msg{
+    margin-top: 5px;
+}
+
+.mymsg{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: white;
+    width: 30%;
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+    float: right;
+   
+}
+
+.Botmsg{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: white;
+    width: 30%;
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+.BotProfile{
+    width: 20px;
+}
+
+.footer{
+
+    position: absolute;
+    display: flex;
+    bottom: 0px;
+    width: 100%;
+}
