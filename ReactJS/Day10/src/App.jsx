@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import SubHero from "./components/SubHero/SubHero";
+import Card from "./components/Card/Card";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       </div>
       <Hero/>
       <SubHero/>
+     <Card/>
     </>
   );
 };
